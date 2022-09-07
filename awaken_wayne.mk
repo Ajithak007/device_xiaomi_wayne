@@ -9,7 +9,7 @@
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
 # Inherit ShapeShiftOS product configuration
-$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -25,18 +25,11 @@ BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := ssos_wayne
+PRODUCT_NAME := awaken_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# Inherit ShapeShiftOS Official build stuff.
-SSOS_BUILD_TYPE := OFFICIAL
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-PRODUCT_PRODUCT_PROPERTIES += \
-  ro.ssos.cpu=SDM660
 
 # GApps
 TARGET_GAPPS_ARCH := arm64
